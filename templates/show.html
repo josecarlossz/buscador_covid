@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="media content-section">
+    <div class="media-body">
+      <h2 class="account-heading">{{ info['name_es'] }}</h2>
+      <p class="text-secondary">Casos hasta el día de hoy: {{ info['today_confirmed'] }}</p>
+      <p class="text-secondary">Muertes hasta el día de hoy: {{ info['today_deaths'] }}</p>
+      <p class="text-secondary">Nuevos casos confirmados hoy (últ. 24h): {{ info['today_new_confirmed'] }}</p>
+      <p class="text-secondary">Nuevas muertes (últ. 24h): {{ info['today_new_deaths'] }}</p>
+    </div>
+    <a href="/" class="btn btn-outline-info">Regresar</a>
+  </div>
+{% endblock content %}

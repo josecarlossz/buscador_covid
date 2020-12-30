@@ -14,16 +14,42 @@
 </head>
 <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-        <div class="container">
-          <a class="navbar-brand mr-4" href="/">BUSCADOR COVID</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-          </div>
-        </div>
-      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-personal fixed-top">
+        <a class="navbar-brand" href="/">
+          <img src="/static/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+  BUSCADOR COVID
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/info">¿Quiénes somos?</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Enlaces externos
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="https://covid19tracking.narrativa.com/" target="_blank">Proyecto API COVID-19</a>
+               <a class="dropdown-item" href="https://pypi.org/project/Flask/" target="_blank">Flask - Pypi</a>
+               <a class="dropdown-item" href="https://cordova.apache.org/" target="_blank">Apache Cordova</a>
+               <div class="dropdown-divider">
+               </div>
+               <a class="dropdown-item" href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/home.htm" target="_blank">COVID-19 - Ministerio de Sanidad</a>
+             </div>
+           </li>
+         </ul>
+       </div>
+    </nav>
     </header>
     <main role="main" class="container">
       <div class="row">
@@ -34,7 +60,7 @@
       <div id="footer" xmlns:dc="http://purl.org/dc/elements/1.1/">
       <p id="copyright" property="dc:rights">&copy;
         <span property="dc:dateCopyrighted">2020</span>
-        <span property="dc:publisher">LT, GITT - ETSIIT (UGR)</span>
+        <span property="dc:publisher">BUSCADOR COVID - LT, GITT - ETSIIT (UGR)</span>
       </p>
       </div>
     </main>

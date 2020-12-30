@@ -3,7 +3,7 @@
 """
 Created on Sun Dec 27 18:20:38 2020
 
-@author: josecarlos
+@authors: josecarlos
 """
 
 from flask import Flask, render_template, redirect, url_for
@@ -24,7 +24,7 @@ date2 = date.today()
 @app.route('/', methods=['GET', 'POST'])
 def home():
     global date2
-    
+
     form = SearchForm()
     if form.validate_on_submit():
         date2 = date.today()
@@ -35,19 +35,17 @@ def home():
 @app.route('/search/<name>')
 def search(name):
     global date2
-    
+
     info = requests.get('https://api.covid19tracking.narrativa.com/api/'+ str(date2) + '/country/spain/region/'+ name)
     info = unicodedata.normalize('NFKD', info.text).encode('ascii','ignore')
     info = json.loads(info)
     info = info['dates'][str(date2)]['countries']['Spain']['regions'][0]
     return render_template('show.html', info=info)
 
-@app.route('/hello/<name>')
-def hello(name):
-    global date2
-    
-    info = requests.get('https://api.covid19tracking.narrativa.com/api/'+ str(date2) + '/country/spain/region/'+ name)
-    return info.text
+@app.route('/info')
+def info():
+
+    return render_template('info.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=1234)
+    app.run(debug=True, host='0.0.0.0', port=1234)

@@ -2,12 +2,20 @@
 {% block content %}
   <div class="media content-section">
     <div class="media-body">
-      <h2 class="account-heading">{{ info['name_es'] }}</h2>
-      <p class="text-secondary">Casos hasta el día de hoy: {{ info['today_confirmed'] }}</p>
-      <p class="text-secondary">Muertes hasta el día de hoy: {{ info['today_deaths'] }}</p>
-      <p class="text-secondary">Nuevos casos confirmados hoy (últ. 24h): {{ info['today_new_confirmed'] }}</p>
-      <p class="text-secondary">Nuevas muertes (últ. 24h): {{ info['today_new_deaths'] }}</p>
+      <legend class="border-bottom mb-4"><h2 class="account-heading" align="center">{{ info['name_es'] }}</h2></legend>
+      <h5 align="center">CASOS TOTALES</h5>
+      <h6 align="center">{{ info['today_confirmed'] }}</h6>
+      <h5 align="center">DECESOS TOTALES</h5>
+      <h6 align="center">{{ info['today_deaths'] }}</h6>
+      <h5 align="center">NUEVOS CASOS (ÚLT. 24H)</h5>
+      <h6 align="center">{{ info['today_new_confirmed'] }}</h6>
+      <h5 align="center">NUEVOS DECESOS (ÚLT. 24H)</h5>
+      <h6 align="center">{{ info['today_new_deaths'] }}</h6>
+      <br> <br>
+      <div class="row justify-content-center">
+      <a href="/" class="btn btn-outline-success" align="center">Regresar</a>
+      </div>
     </div>
-    <a href="/" class="btn btn-outline-info">Regresar</a>
   </div>
+
 {% endblock content %}
